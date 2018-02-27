@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<include file="Public:header" />
+
+	<body>
+		<include file="Public:top" />
+		<br />
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="#" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">说说</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+							<volist name="list" id="vo">
+								<div class="clearfix articlebox">
+									<div class="detail_a">
+										<div class="said_time">
+											<span class="icon-paper-plane">&nbsp;{$vo.create_time|tranTime}&nbsp;&nbsp;</span>
+											<span class="tag bg-dot">{$vo.s_from}</span>&nbsp;&nbsp;<span class="icon-map-marker"></span>&nbsp;{$vo.create_ip}
+										</div>
+									</div>
+									<div class="said_img">
+										<img src="__ROOT__/Uploads/{$vo['s_img']}" data-toggle="hover" data-place="right" title="作者：[ {$vo.s_writer} ],发表自[ {$vo.create_ip} ]" class="radius-circle tips" width="60px" height="60px" />
+										<div class="said_c">
+											{$vo.s_content}
+										</div>
+									</div>
+								</div>
+								<br />
+							</volist>
+							<br />
+							<br />
+						</div>
+						<hr />
+						<div class="pages" style=" text-align: right;">
+							{$page}
+						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>
+				<include file="Public:right" />
+			</div>
+		</div>
+		<include file="Public:footer" />
+	</body>
+
+</html>

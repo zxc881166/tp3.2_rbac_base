@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<include file="Public:header" />	      	
+	<include file="Public:page_css" />
+	<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+		<include file="Public:nav" />
+		<div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-12">
+                <h2>编辑轮播</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html"><i class="fa fa-home"></i> 主页</a>
+                    </li>
+                    <li>
+                        <a>系统管理</a>
+                    </li>
+                    <li>
+                        <strong>编辑轮播</strong>
+                    </li>
+                </ol>
+            </div>              
+        </div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-title">						
+						<div class="ibox-tools">
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+						</div>
+					</div>
+					<div class="ibox-content">
+						<form class="form-horizontal" method="post" action="__URL__/runeditcarousel" name="runeditcarousel" id="runeditcarousel">
+							<input type="hidden" name="id" id="id" value="{$list.id}" />
+							<div class="form-group">
+								<label class="col-sm-2 control-label">轮播名称</label>
+								<div class="col-sm-6">
+									<input type="text" name="title" id="title" value="{$list.title}" placeholder="输入轮播名称" class="form-control">
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label no-padding-right" for="form-field-1"> 轮播图片： </label>
+								<div class="col-sm-10">
+								<input type="hidden" name="checkpic" id="checkpic" value="__PUBLIC__{$list.img}" />
+								<input type="hidden" name="oldcheckpic" id="oldcheckpic" value="__PUBLIC__{$list.img}" />
+								<a href="javascript:;" class="file" title="点击选择所要上传的图片">
+                                    <input type="file" name="file0" id="file0" multiple="multiple"/>
+									选择上传文件
+								</a>
+								<!-- &nbsp;&nbsp;<a href="javascript:;" onclick="return backpic('__ROOT__/Uploads/<if condition="$list.img eq ''">/img/no_img.jpg<else/>{$list.img}</if>');" title="还原修改前的图片" class="file">
+                                    撤销上传
+								</a> -->
+								
+								<div><img src="<if condition="$list[img] neq ''">__ROOT__/Uploads/{$list.img}<else/>__PUBLIC__/Admin/img/no_img.jpg</if>" height="70" id="img0" ></div>
+								</div>
+							</div>													
+							
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">是否显示</label>
+								<div class="col-sm-6">
+									<div class="radio">
+										<if condition="$list['state'] eq 1 ">
+											<input type="checkbox" name='state' value="1" class="js-switch" checked />
+	                        			<else/>
+	                        				<input type="checkbox" name='state' value="1" class="js-switch" />
+	                        			</if>
+	                        		</div>
+								</div>
+							</div>
+						
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">备注</label>
+								<div class="col-sm-6">
+									<input type="text" name="note" value="{$list.note}" id="note" class="form-control">
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">排序</label>
+								<div class="col-sm-6">
+									<input type="text" name="orderby" value="{$list.orderby}" id="orderby" class="form-control">
+								</div>
+							</div>
+						
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<div class="col-sm-4 col-sm-offset-2">
+									<button class="btn btn-primary" type="submit">保存内容</button>
+									<a class="btn btn-danger" href="{:U('system/carousel_list')}">取消</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public:footer" />
+		<script src="__PUBLIC__/Admin/js/plugins/switchery/switchery.js"></script><!--IOS开关样式-->
+  <script>
+
+function backpic(picurl){
+	$("#img0").attr("src",picurl);
+	$("input[name='file0']").val("");
+	$("input[name='oldcheckpic']").val(picurl);
+}
+$("#file0").change(function(){
+	var objUrl = getObjectURL(this.files[0]) ;
+	console.log("objUrl = "+objUrl) ;
+	if (objUrl) {
+		$("#img0").attr("src", objUrl) ;
+	}
+}) ;
+
+function getObjectURL(file) {
+	var url = null ; 
+	if (window.createObjectURL!=undefined) { 
+	$("#oldcheckpic").val("nopic");
+		url = window.createObjectURL(file) ;
+	} else if (window.URL!=undefined) { 
+	$("#oldcheckpic").val("nopic");
+		url = window.URL.createObjectURL(file) ;
+	} else if (window.webkitURL!=undefined) { 
+		$("#oldcheckpic").val("nopic");
+		url = window.webkitURL.createObjectURL(file) ;
+	}
+	return url ;
+}
+
+
+
+
+$(function(){
+	$('#runeditcarousel').ajaxForm({
+		beforeSubmit: checkForm, 
+		success: complete, 
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+	
+		if( '' == $.trim($('#title').val())){
+			layer.alert('轮播名称不能为空', {icon: 6}, function(index){
+ 			layer.close(index);
+			$('#title').focus(); 
+			});
+			return false;
+		}
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			layer.alert(data.info, {icon: 5}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+			return false;	
+		}
+	}
+});
+
+
+		//IOS开关样式配置
+       var elem = document.querySelector('.js-switch');
+            var switchery = new Switchery(elem, {
+                color: '#1AB394'
+            });
+        var config = {
+            '.chosen-select': {},                    
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+</script>
+	<script type="text/javascript">
+			
+		var ue = UE.getEditor('editor');
+		var editor_a = new baidu.editor.ui.Editor(editorOption);
+		editor_a.render('editor');
+		
+	</script>
+	<script>
+       
+        var config = {
+            '.chosen-select': {},                    
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+    </script>
+	</body>
+</html>

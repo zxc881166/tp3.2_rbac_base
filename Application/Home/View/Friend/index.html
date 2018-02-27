@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<include file="Public:header" />
+
+	<body>
+		<include file="Public:top" />		
+		<br />
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="#" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">访客</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+							<h4>最近QQ访客</h4>
+							此处为通过QQ登陆本网站<span style="color:red">(已有{$count}人登录本站)</span><hr>
+				            <div class="friends">
+				                <div class="QQfriends">			                    
+			                        <volist name="QQ" id="v">				                           
+			                                <img src="{$v.qqimg}" title="{$v.qqname}.最近登陆{$v.qqnum}次" class="radius-circle" width="60px" height="60px">				                           
+			                        </volist>				                    
+				                </div>
+				            </div>							
+							<br />							
+						</div>						
+						<hr />
+						<div class="pages" style=" text-align: right;">
+							{$page}
+						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+				<include file="Public:right" />
+			</div>
+		</div>	
+		<include file="Public:footer" />
+	</body>
+</html>

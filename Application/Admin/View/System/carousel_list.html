@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<include file="Public:header" />
+	<include file="Public:page_css" />
+
+	<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+
+		<include file="Public:nav" />
+		<div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-12">
+                <h2>轮播管理</h2>
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="index.html"><i class="fa fa-home"></i> 主页</a>
+                    </li>
+                    <li>
+                        <a>系统管理</a>
+                    </li>
+                    <li>
+                        <strong>轮播管理</strong>
+                    </li>
+                </ol>
+            </div>              
+        </div>
+        <br />	
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加轮播</button>
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-title">
+						<h5><i class="fa fa-tasks"></i> 用户列表</h5>
+					</div>
+					<div class="ibox-content">
+						<table class="table table-bordered">
+							<thead>
+								<tr class="long-tr">
+									<th>编号</th>
+									<th>标题</th>									
+									<th>图片</th>									
+									<th>状态</th>
+									<th>排序</th>
+									<th>添加时间</th>									
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="list" id="vo" >
+									<tr class="long-td">
+										<td>{$i}</td>
+										<td>{$vo.title}</td>							
+										<td><img src="__ROOT__/Uploads/{$vo.img}" style="width: 180px;height: 70px" /></td>
+										<td>
+											<if condition="$vo.state eq 1">
+                                        			<span class="label label-primary">显示</span>
+                                        		<else/>
+                                        			<span class="label label-danger">不显示</span>
+                                        	</if>
+										</td>
+										<td>{$vo.orderby}</td>
+										<td>{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+										<td>
+											<a href="{:U('editcarousel',array('id'=>$vo['id']))}" class="btn btn-primary btn-mini">
+												<i class="fa fa-pencil"></i> 编辑</a>&nbsp;&nbsp;
+											<a href="javascript:;" onclick="return del({$vo.id});" class="btn btn-danger">
+												<i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
+								</volist>
+							</tbody>
+						</table>
+						<div class="pages" style=" text-align: right;">
+							{$page}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public:footer" />
+
+	<div class="modal  fade" id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
+		<div class="modal-dialog">
+		    <div class="modal-content">
+		        <div class="modal-header">
+		            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		            <h3 class="modal-title">添加轮播</h3>		           
+		        </div>
+		        <form class="form-horizontal" name="add" id="add" method="post" action="__URL__/runadd">
+		        	<div class="ibox-content">
+						
+							<div class="form-group">
+								<label class="col-sm-2 control-label">轮播名称</label>
+								<div class="col-sm-8">
+									<input type="text" name="title" id="title" placeholder="输入轮播名称" class="form-control"/>
+								</div>
+							</div>						
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="form-field-1"> 轮播图片</label>
+								<div class="col-sm-10">
+								<a href="javascript:;" class="file">
+									<input type="file" name="file0" id="file0" multiple="multiple"/>
+									上传图片
+								</a>								
+								<div><img src="__PUBLIC__/Admin/img/no_img.jpg" height="70" id="img0" ></div>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">排序</label>
+								<div class="col-sm-8">
+									<input type="text" name="orderby" id="orderby" placeholder="输入排序" class="form-control"/>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">备注</label>
+								<div class="col-sm-8">
+									<input type="text" name="note" id="note" placeholder="输入备注信息" class="form-control"/>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">状态</label>
+								<div class="col-sm-6">
+									<div class="radio ">	                        			
+	                        			<input type="checkbox" name='state' value="1" class="js-switch" checked />&nbsp;&nbsp;默认显示	                        			
+	                        		</div>
+								</div>
+							</div>					
+						</div>
+			        <div class="modal-footer">
+			        	<button type="submit" class="btn btn-primary">保存内容</button>
+			            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>		            
+			        </div>
+		        </form>
+		    </div>
+		</div>
+	</div>
+<script src="__PUBLIC__/Admin/js/plugins/switchery/switchery.js"></script><!--IOS开关样式-->
+<script>
+function del(id,p){
+	layer.confirm('你确定要删除吗？', {icon: 3}, function(index){
+	layer.close(index);
+	window.location.href="__URL__/del/id/"+id+"";
+	});
+}
+
+
+$(document).ready(function(){
+	$("#myModaledit").hide();	
+
+});
+
+
+
+//添加操作
+$(function(){
+	$('#add').ajaxForm({
+		beforeSubmit: checkForm,
+		success: complete, 
+		dataType: 'json'
+	});
+	
+	function checkForm(){
+		if( '' == $.trim($('#title').val())){
+			layer.alert('标题不能为空', {icon: 5}, function(index){
+ 			layer.close(index);
+			$('.title').focus(); 
+			});
+			return false;
+		}
+	
+		if( '' == $.trim($('#orderby').val())){
+			layer.alert('排序不能为空', {icon: 5}, function(index){
+ 			layer.close(index);
+			$('#orderby').focus(); 
+			});
+			return false;
+		}
+ }
+	function complete(data){
+		if(data.status==1){
+			layer.alert(data.info, {icon: 6}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+		}else{
+			layer.alert(data.info, {icon: 5}, function(index){
+ 			layer.close(index);
+			window.location.href=data.url;
+			});
+			return false;	
+		}
+	}
+});
+
+
+
+$("#file0").change(function(){
+	var objUrl = getObjectURL(this.files[0]) ;
+	console.log("objUrl = "+objUrl) ;
+	if (objUrl) {
+		$("#img0").attr("src", objUrl) ;
+	}
+}) ;
+
+
+function getObjectURL(file) {
+
+	var url = null ; 
+	if (window.createObjectURL!=undefined) {
+		url = window.createObjectURL(file) ;
+	} else if (window.URL!=undefined) { 
+		url = window.URL.createObjectURL(file) ;
+	} else if (window.webkitURL!=undefined) {
+		url = window.webkitURL.createObjectURL(file) ;
+	}
+	return url ;
+}
+
+
+function backpic(picurl){
+	$("#img0").attr("src",picurl);
+	$("input[name='file0']").val("");
+}
+
+
+var elem = document.querySelector('.js-switch');
+    var switchery = new Switchery(elem, {
+        color: '#1AB394'
+    });
+var config = {
+    '.chosen-select': {},                    
+}
+for (var selector in config) {
+    $(selector).chosen(config[selector]);
+}
+
+
+</script>
+
+
+	</body>
+
+</html>

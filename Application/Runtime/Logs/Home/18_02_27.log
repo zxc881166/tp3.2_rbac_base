@@ -1,0 +1,377 @@
+[ 2018-02-27T10:19:17+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+
+[ 2018-02-27T11:37:21+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+
+[ 2018-02-27T11:37:21+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+
+[ 2018-02-27T11:37:28+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+
+[ 2018-02-27T11:37:28+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+
+[ 2018-02-27T11:39:22+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000710s ]
+
+[ 2018-02-27T11:39:22+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000886s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+
+[ 2018-02-27T11:39:47+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+
+[ 2018-02-27T11:39:47+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000691s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+
+[ 2018-02-27T11:40:04+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+
+[ 2018-02-27T11:40:04+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+
+[ 2018-02-27T11:40:29+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+
+[ 2018-02-27T11:40:29+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+
+[ 2018-02-27T11:40:31+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+
+[ 2018-02-27T11:40:31+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+
+[ 2018-02-27T11:40:38+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+
+[ 2018-02-27T11:40:38+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-02-27T11:40:47+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000840s ]
+
+[ 2018-02-27T11:40:47+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001313s ]
+
+[ 2018-02-27T11:40:49+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+
+[ 2018-02-27T11:40:49+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+
+[ 2018-02-27T11:41:28+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+
+[ 2018-02-27T11:41:28+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+
+[ 2018-02-27T11:41:31+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+
+[ 2018-02-27T11:41:31+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+
+[ 2018-02-27T11:41:40+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+
+[ 2018-02-27T11:41:40+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+
+[ 2018-02-27T11:42:39+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000965s ]
+
+[ 2018-02-27T11:42:39+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002462s ]
+
+[ 2018-02-27T11:42:51+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001887s ]
+
+[ 2018-02-27T11:42:51+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-02-27T11:43:09+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\gdjk\Application\Home\Controller\BaseController.class.php 第 25 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+
+[ 2018-02-27T11:43:09+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\gdjk\Application\Home\Controller\BaseController.class.php 第 25 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+
+[ 2018-02-27T11:43:11+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010236s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\gdjk\Application\Home\Controller\BaseController.class.php 第 25 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+
+[ 2018-02-27T11:43:11+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002401s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\gdjk\Application\Home\Controller\BaseController.class.php 第 25 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\gdjk\Application\Common\Common\function.php 第 79 行.
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+ERR: 1146:Table 'db_gdjk.web_article' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `web_article`
+
+[ 2018-02-27T14:10:38+08:00 ] 127.0.0.1 /Statics/My97/WdatePicker.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000841s ]
+
+[ 2018-02-27T14:10:38+08:00 ] 127.0.0.1 /Public/js/jquery.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001056s ]
+

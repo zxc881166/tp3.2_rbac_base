@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<include file="Public:header" />
+<link rel="stylesheet" href="__PUBLIC__/Common/Ueditor/third-party/SyntaxHighlighter/shCore.min.css" ></script>
+        <script type="text/javascript" src="__PUBLIC__/Common/Ueditor/third-party/SyntaxHighlighter/shCore.min.js" ></script>         
+        <script>  
+        	SyntaxHighlighter.config.clipboardSwf = 'public/clipboard.swf';
+			SyntaxHighlighter.all();    
+		</script>
+	<body>
+		<include file="Public:top" />
+		<br />
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="#" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">文章正文</li></a>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+							<div class="a_title">{$Article.a_title}</div>
+							<div class="a-write">时间：&nbsp;{$Article.create_time|date="Y-m-d H:i",###}&nbsp;&nbsp;作者：<a>{$Article.a_writer}</a>&nbsp;&nbsp;阅读：（{$Article.a_views}）</div>
+							<div class="a-content"  style="width:700px">
+								{$Article.a_content}
+							</div>
+							<div class="a-write hidden-xs">
+								<eq name="Article.a_type" value="1">本文为原创，转载请注明出处:&nbsp;&nbsp;<a>{:C('siteurl')}/Article/index/a_id/{$Article.a_id}.html</a>
+									<br>
+								</eq>
+								发表自：&nbsp;{$Article.a_from}&nbsp;&nbsp;地址：{$Article.create_ip|getIpaddr}&nbsp;&nbsp;评论：&nbsp;{$Common|count}&nbsp;&nbsp;关键词：&nbsp;{$Article['a_keyword']?$Article['a_keyword']:'暂无标签'}&nbsp;&nbsp;
+							</div>
+							<br />
+							<div class="bdsharebuttonbox fenxiang">
+								<a class="bds_more" href="#" data-cmd="more"></a>
+								<a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone"></a>
+								<a title="分享到腾讯微博" class="bds_tqq" href="#" data-cmd="tqq"></a>
+								<a title="分享到微信" class="bds_weixin" href="#" data-cmd="weixin"></a>
+								<a title="分享到百度贴吧" class="bds_tieba" href="#" data-cmd="tieba"></a>
+								<a title="分享到百度云收藏" class="bds_bdysc" href="#" data-cmd="bdysc"></a>
+								<a title="分享到QQ好友" class="bds_sqq" href="#" data-cmd="sqq"></a>
+							</div>
+							<script>
+								window._bd_share_config = {
+									"common": {
+										"bdSnsKey": {},
+										"bdText": "轮回博客的分享",
+										"bdMini": "2",
+										"bdMiniList": false,
+										"bdPic": "http://tianjianlong.com.cn//Public/Img/logo.png",
+										"bdStyle": "1",
+										"bdSize": "24"
+									},
+									"share": {}
+								};
+								with(document)
+								0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+							</script>
+						</div>
+						<hr />
+						<div class="a-up">
+							<p>上一篇：
+								<if condition="$down['a_id'] eq 0">
+									<a title='没有了'>&nbsp;没有了</a>
+									<else />
+									<a title='{$down.a_title}' href="{:U('Article/index',array('a_id'=>$down['a_id']))}">{$down.a_title}</a>
+								</if>
+							</p>
+						</div>
+						<div class="a-down">
+							<p>下一篇：
+								<if condition="$up['a_id'] eq 0">
+									<a title='没有了'>&nbsp;没有了</a>
+									<else />
+									<a title='{$up.a_title}' href="{:U('Article/index',array('a_id'=>$up['a_id']))}">{$up.a_title}</a>
+								</if>
+							</p>
+						</div>
+						<div class="pages" style=" text-align: right;">
+							{$page}
+						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>
+				<include file="Public:right" />
+			</div>
+		</div>
+		<include file="Public:footer" />
+	</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<include file="Public:header" />
+	<include file="Public:page_css" />
+
+	<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+
+		<include file="Public:nav" />
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content no-padding">
+						<ul class="list-group">
+							<li class="list-group-item">
+								<p class="text-success"><a href="{:U('Index/index')}" title="返回首页" class="tip-bottom"><i class="fa fa-home"></i> 首页</a> /
+									<a href="#" class="tip-bottom"> 系统管理</a> / <a href="{:U('System/role')}" class="tip-bottom">角色管理</a></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="{:U('System/addrole')}" class="btn btn-primary">添加角色</a>
+		<br />
+		<br />
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-title">
+						<h5><i class="fa fa-tasks"></i> 角色列表</h5>
+					</div>
+					<div class="ibox-content">
+						<table class="table table-bordered">
+							<thead>
+								<tr class="long-tr">
+									<th>编号</th>
+									<th>角色名称</th>
+									<th>备注信息</th>
+									<th>状态</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="list" id="vo" key="val">
+									<tr class="long-td">
+										<td>{$val}</td>
+										<td>{$vo.name}</td>
+										<td>{$vo.remark}</td>
+										<td>
+											<if condition="$vo.status eq 1 ">
+												启用
+											</if>
+											<if condition="$vo.status eq 0 ">
+												停用
+											</if>
+										</td>
+										<td>
+											<a href="{:U('setting',array('id'=>$vo['id']))}" class="btn btn-success">权限设置</a>&nbsp;&nbsp;
+											<a href="{:U('editrole',array('id'=>$vo['id']))}" class="btn btn-primary"><i class="fa fa-pencil"></i> 编辑</a>&nbsp;&nbsp;
+											<a onClick="return confirm('是否删除此条记录')" href="{:U('delrole',array('id'=>$vo['id']))}" class="btn btn-danger demo1">
+													<i class="fa fa-trash-o"></i> 删除</a>
+										</td>
+									</tr>
+								</volist>
+							</tbody>
+						</table>
+						<div class="pages" style=" text-align: right;">
+							{$page}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public:footer" />
+	</body>
+
+</html>

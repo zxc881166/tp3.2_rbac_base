@@ -1,0 +1,5 @@
+[ 2018-01-24T11:38:45+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+

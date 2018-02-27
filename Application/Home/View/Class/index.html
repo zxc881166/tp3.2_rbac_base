@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<include file="Public:header" />
+
+	<body>
+		<include file="Public:top" />		
+		<br />
+		<div class="container">
+			<div class="">
+				<ul class="bread">
+					<h4>
+					<li><a href="#" class="icon-home"> 首页</a> </li>					
+					<li><a href="#">文章分类</a></li>
+					</h4>
+				</ul>
+			</div>
+			<div class="line-big">
+				<div class="xl12 xm8">
+					<div class="line-small">
+						<div class="xs12">
+							<volist name="article" id="vo" empty="暂时没有文章">
+								<div class="clearfix articlebox">
+									<div class="detail_a">
+										<if condition="$vo.a_type eq 1">
+												<span class="tag bg-dot">原 创</span>&nbsp;&nbsp;
+											<else/>
+												<span class="tag bg-green">转 载</span>&nbsp;&nbsp;
+										</if>
+										<a href="{:U('Article/index',array('a_id'=>$vo['a_id']))}" style="font-size: 16px;">{$vo.a_title}</a>
+	
+										<div class="a_tuijian">
+											<if condition="$vo.a_red eq 1">
+												<img src="__PUBLIC__/Home/images/tuijian.gif" style="width:70px" />
+											</if>
+										</div>
+									</div>
+									<div class="article">
+										<ul class="icourse-course">
+											 <li>
+									                <a href="{:U('Article/index',array('a_id'=>$vo['a_id']))}">
+											            <div class="icourse-img">
+											            	<img src="__ROOT__/Uploads/{$vo.photo}" onerror="this.src='__PUBLIC__/Home/images/default.jpg'" class="img" title="{$v.a_title}" width="100%" height="200px" />
+											            </div>
+									       
+									                </a>
+									           </li>										
+
+										</ul>
+										<div class="remark">
+											{$vo.a_remark}
+										</div>
+									</div>
+	
+									<div class="write">
+										<span class="icon-paper-plane"></span>&nbsp;{$vo.create_time|date="Y-m-d H:i",###}&nbsp;&nbsp;作者：{$vo.a_writer}&nbsp;&nbsp;分类：[&nbsp;{$vo.cate_name}&nbsp;]<span class="hidden-xs">&nbsp;&nbsp;点击：[&nbsp;{$vo.a_views}&nbsp;]</span>
+									</div>
+									<div class="look-all">
+										<a href="{:U('Article/index',array('a_id'=>$vo['a_id']))}" class="button border-blue" role="button">查看全部</a>
+									</div>
+								</div>
+								<br />
+							</volist>							
+							<br />							
+						</div>						
+						<hr />
+						<div class="pages" style=" text-align: right;">
+							{$page}
+						</div>
+					</div>
+					<br />
+					<br />
+					<br />
+				</div>				
+				<include file="Public:right" />
+			</div>
+		</div>	
+		<include file="Public:footer" />
+	</body>
+</html>

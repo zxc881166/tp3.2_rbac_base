@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <include file="Public:header" />
+    <include file="Public:page_css" />
+
+    <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+
+        <include file="Public:nav" />
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content no-padding">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="text-success"><a href="{:U('Index/index')}" title="返回首页" class="tip-bottom"><i class="fa fa-home"></i> 首页</a> /
+                                    <a href="#" class="tip-bottom"> 系统管理</a> / <a href="#" class="tip-bottom">菜单管理</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="addChild(this)">添加菜单</button>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5><i class="fa fa-tasks"></i> 菜单列表</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="long-tr">
+                                    <th style="width: 5%">排序</th>
+                                    <th style="width: 15%">菜单名称</th>
+                                    <th style="width: 5%">图标</th>
+                                    <th style="width:15%">链接</th>
+                                    <th style="width: 25%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <volist name="list" id="vo" key="val">
+                                    <tr class="long-td">
+                                        <td style="text-align: center">{$vo.sort}</td>
+                                        <td style="text-align: left"><b>{$vo.title}</b></td>
+                                        <td style="text-align: center"><i class="icon {$vo.ico}"></i></td>
+                                        <td style="text-align: center">{$vo.g}/{$vo.m}/{$vo.a}</td>
+                                        <td style="text-align: center">
+                                            <a href="javascript:;" data-toggle="modal" data-target="#myModal" data-id="{$vo.id}" onclick="addChild(this)">添加子菜单</a> | 
+                                            <a href="javascript:;" data-toggle="modal" data-target="#myModal" data-id="{$vo.id}" data-pid="{$vo.pid}" data-title="{$vo.title}" data-sort="{$vo.sort}" data-ico="{:substr($vo['ico'],6)}" data-gma="{$vo.g}/{$vo.m}/{$vo.a}" onclick="edit(this)">修改</a> | 
+                                            <a href="javascript:;" onclick="return del({$vo.id});">删除</a>
+                                        </td>
+                                    </tr>
+                                    <volist name="vo.sublist" id="v" key="k">
+                                        <tr class="long-td">
+                                            <td style="text-align: center">{$v.sort}</td>
+                                            <td style="text-align: left">　└───{$v.title}</td>
+                                            <td style="text-align: center"><i class="icon {$v.ico}"></i></td>
+                                            <td style="text-align: center">{$v.g}/{$v.m}/{$v.a}</td>
+                                            <td style="text-align: center">
+                                                <a href="javascript:;" data-toggle="modal" data-target="#myModal" data-id="{$v.id}" data-pid="{$v.pid}" data-title="{$v.title}" data-sort="{$v.sort}" data-ico="{:substr($v['ico'],6)}" data-gma="{$v.g}/{$v.m}/{$v.a}" onclick="edit(this)">修改</a> | 
+                                                <a href="javascript:;" onclick="return del({$v.id});">删除</a>
+                                            </td>
+                                        </tr>
+                                    </volist>
+                                </volist>
+                            </tbody>
+                        </table>
+                        <div class="pages" style=" text-align: right;">
+                            {$page}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include file="Public:footer" />
+        <div class="modal  fade" id="myModal" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h3 class="modal-title">添加菜单</h3>                  
+                    </div>
+                    <form class="form-horizontal" name="add" id="add" method="post" action="__URL__/addnav">
+                        <div class="ibox-content">
+                                <input type="hidden" name="id" value="" />
+                                <input type="hidden" name="pid" value="" />
+                                <input type="hidden" name="single" value="" />
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">菜单名称</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="title" id="title" placeholder="输入菜单名称" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">链接</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="gma" id="gma" placeholder="输入模块/控制器/方法即可 例如 Admin/Nav/index" class="form-control"/>
+                                    </div>
+                                </div>                 
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">图标</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="ico" placeholder="font-awesome图标 输入fa fa- 后边的即可" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">排序</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" name="sort" placeholder="输入排序号" class="form-control"/>
+                                    </div>
+                                </div>   
+                            </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">保存内容</button>
+                            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>                    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    $(function(){
+        $('#add').ajaxForm({
+            beforeSubmit: checkForm,
+            success: complete, 
+            dataType: 'json'
+        });
+
+        function checkForm(){
+            if( '' == $.trim($('#title').val())){
+                layer.alert('标题不能为空', {icon: 5}, function(index){
+                    layer.close(index);
+                    $('#title').focus(); 
+                });
+                return false;
+            }
+        
+            if( '' == $.trim($('#gma').val())){
+                layer.alert('链接不能为空', {icon: 5}, function(index){
+                    layer.close(index);
+                    $('#gma').focus(); 
+                });
+                return false;
+            }
+        }
+
+        function complete(data){
+            if(data.status==1){
+                layer.alert(data.info, {icon: 6}, function(index){
+                    layer.close(index);
+                    window.location.href=data.url;
+                });
+            }else{
+                layer.alert(data.info, {icon: 5}, function(index){
+                    layer.close(index);
+                    window.location.href=data.url;
+                });
+                return false;   
+            }
+        }
+
+    });
+
+    //添加子菜单
+    function addChild(obj){
+        var id = $(obj).data('id');
+        $('input[name="pid"]').val(id);
+        $('input[name="title"]').val('');
+        $('input[name="ico"]').val('');
+        $('input[name="gma"]').val('');
+        $('input[name="sort"]').val('');
+    }
+
+    function edit(obj){
+        $('input[name="id"]').val($(obj).data('id'));
+        $('input[name="pid"]').val($(obj).data('pid'));
+        $('input[name="title"]').val($(obj).data('title'));
+        $('input[name="ico"]').val($(obj).data('ico'));
+        $('input[name="gma"]').val($(obj).data('gma'));
+        $('input[name="sort"]').val($(obj).data('sort'));
+    }
+
+    function del(id,p){
+        layer.confirm('你确定要删除吗？', {icon: 3}, function(index){
+            layer.close(index);
+            $.get('/Admin/System/del_nav',{id:id},function(msg){
+                if(msg.status){
+                    window.location.reload();
+                }else{
+                    layer.msg(msg.info,{icon:-1});
+                }
+            },'json');
+        });
+    }
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>轮回博客 - 搜索</title>
+		<meta name="keywords" content="{$keyword}" />
+		<meta name="description" content="{$description}" />
+		<meta name="version" content="{$foot['name']}  {$foot.version}" />
+		<meta name="author" content="{$foot['author']}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<include file="Public:nav" />
+		<div class="row aerousel">
+			<div class="col-md-8 row-l">
+				<h4>搜索文章</h4>
+				<hr />
+
+				<volist name="article" id="v" empty="暂时没有你想要的文章">
+					<article>
+
+						<div class="post-summary" style="background-color: #ffffff;box-shadow: 0 0 10px 7px rgba(218, 218, 218, 0.5);">
+							<div class="clearfix">
+								<h5>
+                      <eq name="v.a_original" value="0">
+                      <span class="original">原创</span>
+                      <else/>
+                      <span class="reprint">转载</span></eq>&nbsp;&nbsp;
+                      <a href="{:U('/article-'.$v['a_id'])}" style="font-size: 16px;">{$v.a_title}</a>
+                      <eq name="v.a_view" value="2">
+                      <div class="title_r hidden-xs">
+                          <img src="__PUBLIC__/Img/tuijian.gif" style="width:70px"/>
+                      </div>
+                      </eq>
+                  			</h5>
+								<div class="he_border2">
+									<a href="{:U('/article-'.$v['a_id'])}">
+										<if condition="$v.a_url eq null">
+	                                        <img src="__PUBLIC__/Img/default.jpg" class="he_border2_img" title="{$v.a_title}" width="100%" height="100%"/>
+	                                        <else/><img src="{$v.a_url}" class="he_border2_img" title="{$v.a_title}" width="100%" height="100%"/>
+	                                        </if>
+									</a>
+									<div class="he_border2_caption">
+										<p class="he_border2_caption_p">{$v.a_title}</p>
+										<a class="he_border2_caption_a" href="{:U('/article-'.$v['a_id'])}" target="_blank"></a>
+									</div>
+								</div>
+								<div class="remark">{$v.a_remark}</div>
+								<a href="{:U('/article-'.$v['a_id'])}" class="btn btn-primary look-all" role="button">查看全部</a>
+								<p class="write hidden-sm">
+									<a><span class="glyphicon glyphicon-time"></span></a> &nbsp;{$v.a_time|date="Y-m-d H:i",###}&nbsp;&nbsp;作者：{$v.a_writer}&nbsp;&nbsp;分类：[&nbsp;{$v.t_name}&nbsp;]<span class="hidden-xs">&nbsp;&nbsp;点击：[&nbsp;{$v.a_hit}&nbsp;]</span>
+								</p>
+							</div>
+						</div>
+					</article>
+					<hr>
+				</volist>
+				{$page}
+			</div>
+			<include file="Public:sider" />
+			<include file="Public:foot" />
+			<script type="text/javascript" src="__PUBLIC__/Js/bootstrap-carousel.js"></script>
+			</body>
+
+</html>

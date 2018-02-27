@@ -1,0 +1,286 @@
+[ 2018-01-22T09:52:46+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.037627s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018430s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 24 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 79 行.
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0757s ]
+SQL: SELECT `a_keyword`,`a_id`,`create_time` FROM `web_article` WHERE ( a_keyword != '' and a_views > 0 ) ORDER BY create_time desc LIMIT 50   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `web_carousel_list` [ RunTime:0.0318s ]
+SQL: SELECT * FROM `web_carousel_list` WHERE ( img != '' and state > 0 ) ORDER BY orderby  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_link` [ RunTime:0.0337s ]
+SQL: SELECT * FROM `web_link` WHERE ( state = 1 ) ORDER BY orderby  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_liuyan` [ RunTime:0.0246s ]
+SQL: SELECT * FROM `web_liuyan` ORDER BY add_time desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `a_id` FROM `web_article` WHERE ( a_views > 0 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_rand(): Second argument has to be between 1 and the number of elements in the array D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 84 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 86 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 87 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 88 行.
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `a_id`,`photo`,`a_title`,`a_remark`,`a_keyword`,`cate_id`,`create_time`,`last_time`,`a_content`,`a_views`,`a_type`,`a_red`,`a_from`,`a_writer`,`create_ip` FROM `web_article` WHERE ( a_views > 0 ) ORDER BY a_views desc LIMIT 12   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `web_article` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `web_article` INNER JOIN web_article_cate ON web_article_cate.cate_id = web_article.cate_id  ORDER BY a_id desc LIMIT 0,6   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.009833s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009895s ]
+NOTIC: [8] Undefined variable: v D:\phpStudy\WWW\aaa\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.517558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.517606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.088260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.088362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.033057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.033251s ]
+
+[ 2018-01-22T09:52:46+08:00 ] 127.0.0.1 /Uploads/images/2016-01-04/5689ced6df25d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+
+[ 2018-01-22T10:09:48+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 24 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 79 行.
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0199s ]
+SQL: SELECT `a_keyword`,`a_id`,`create_time` FROM `web_article` WHERE ( a_keyword != '' and a_views > 0 ) ORDER BY create_time desc LIMIT 50   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_carousel_list` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `web_carousel_list` WHERE ( img != '' and state > 0 ) ORDER BY orderby  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_link` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `web_link` WHERE ( state = 1 ) ORDER BY orderby  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_liuyan` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `web_liuyan` ORDER BY add_time desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `a_id` FROM `web_article` WHERE ( a_views > 0 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_rand(): Second argument has to be between 1 and the number of elements in the array D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 84 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 86 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 87 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 88 行.
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `a_id`,`photo`,`a_title`,`a_remark`,`a_keyword`,`cate_id`,`create_time`,`last_time`,`a_content`,`a_views`,`a_type`,`a_red`,`a_from`,`a_writer`,`create_ip` FROM `web_article` WHERE ( a_views > 0 ) ORDER BY a_views desc LIMIT 12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `web_article` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` INNER JOIN web_article_cate ON web_article_cate.cate_id = web_article.cate_id  ORDER BY a_id desc LIMIT 0,6   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: v D:\phpStudy\WWW\aaa\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.158630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.158681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000849s ]
+
+[ 2018-01-22T10:09:48+08:00 ] 127.0.0.1 /Uploads/images/2016-01-04/5689ced6df25d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+
+[ 2018-01-22T10:09:50+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+
+[ 2018-01-22T10:53:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000829s ]
+NOTIC: [8] Undefined index: code D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 24 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 63 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 65 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function ereg() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 67 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 69 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 71 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 73 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 75 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 77 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 79 行.
+NOTIC: [8192] Function eregi() is deprecated D:\phpStudy\WWW\aaa\Application\Common\Common\function.php 第 79 行.
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0203s ]
+SQL: SELECT `a_keyword`,`a_id`,`create_time` FROM `web_article` WHERE ( a_keyword != '' and a_views > 0 ) ORDER BY create_time desc LIMIT 50   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `web_carousel_list` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `web_carousel_list` WHERE ( img != '' and state > 0 ) ORDER BY orderby  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0169s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `web_link` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `web_link` WHERE ( state = 1 ) ORDER BY orderby  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `web_liuyan` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `web_liuyan` ORDER BY add_time desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT `a_id` FROM `web_article` WHERE ( a_views > 0 )  [ RunTime:0.0002s ]
+NOTIC: [2] array_rand(): Second argument has to be between 1 and the number of elements in the array D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 84 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 86 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 87 行.
+NOTIC: [8] Undefined index:  D:\phpStudy\WWW\aaa\Application\Home\Controller\BaseController.class.php 第 88 行.
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `web_article` WHERE `a_id` = null LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `a_id`,`photo`,`a_title`,`a_remark`,`a_keyword`,`cate_id`,`create_time`,`last_time`,`a_content`,`a_views`,`a_type`,`a_red`,`a_from`,`a_writer`,`create_ip` FROM `web_article` WHERE ( a_views > 0 ) ORDER BY a_views desc LIMIT 12   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `web_article` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `web_article_cate` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `web_article_cate`  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `web_article` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `web_article` INNER JOIN web_article_cate ON web_article_cate.cate_id = web_article.cate_id  ORDER BY a_id desc LIMIT 0,6   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: v D:\phpStudy\WWW\aaa\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 171 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.169788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.169830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001350s ]
+
+[ 2018-01-22T10:53:00+08:00 ] 127.0.0.1 /Uploads/images/2016-01-04/5689ced6df25d.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+
+[ 2018-01-22T11:36:20+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+
+[ 2018-01-22T11:39:04+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+
+[ 2018-01-22T11:41:17+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+
+[ 2018-01-22T14:43:09+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+
+[ 2018-01-22T14:49:42+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+
+[ 2018-01-22T14:50:14+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+
+[ 2018-01-22T14:59:33+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+
+[ 2018-01-22T15:00:05+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+
+[ 2018-01-22T15:00:47+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+
+[ 2018-01-22T15:01:11+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+
+[ 2018-01-22T15:01:47+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+
+[ 2018-01-22T15:07:23+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+
+[ 2018-01-22T15:07:37+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2018-01-22T15:08:56+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+
+[ 2018-01-22T15:36:54+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+
+[ 2018-01-22T15:40:29+08:00 ] 127.0.0.1 /Public/Admin/img/progress.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<include file="Public:header" />
+	<include file="Public:page_css" />
+
+	<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+		<include file="Public:nav" />
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content no-padding">
+						<ul class="list-group">
+							<li class="list-group-item">
+								<p class="text-success"><a href="{:U('Index/index')}" title="返回首页" class="tip-bottom"><i class="fa fa-home"></i> 首页</a> /
+									<a href="#" class="tip-bottom">系统管理</a> /
+									<a href="{:U('System/userlist')}" class="tip-bottom">用户管理</a> /
+									<a href="#" class="tip-bottom">添加用户</a>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-title">
+						<h5>添加用户</h5>
+						<div class="ibox-tools">
+							<a class="collapse-link">
+								<i class="fa fa-chevron-up"></i>
+							</a>
+						</div>
+					</div>
+					<div class="ibox-content">
+						<form class="form-horizontal" method="post" action="{:U('System/adduser')}" name="basic_validate" id="signupForm">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">用户名</label>
+								<div class="col-sm-6">
+									<input type="text" name="user" id="user" placeholder="输入用户名" class="form-control">
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">密码</label>
+								<div class="col-sm-6">
+									<input type="password" id="password" name="password" placeholder="输入密码" class="form-control">
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">显示名称</label>
+								<div class="col-sm-6">
+									<input type="text" id="username" name="username" placeholder="输入显示名称" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">头像 </label>
+								<div class="col-sm-6">
+									<div style="width: 200px; height: 90px; float: left;">
+										<input type="hidden" name="userimg" value="" id="data_photo" />
+										<input id="photo_file" name="photo_file" type="file" multiple="true" value="" />
+									</div>
+									<div style="width: 200px; height: 90px; float: left;">
+										<img id="upload_img" class="img-circle" src="__ROOT__/Uploads/{$detail.userimg|default='touxiang_default.gif'}" style="width: 80px;height: 80px" />
+									</div>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+				                <label class="col-sm-2 control-label">所属角色</label>
+				                <div class="col-sm-6">                   
+				                    <select name = "data[role]" class="form-control m-b chosen-select">
+				                      <foreach name="list" item="var">
+				                          <option value="{$var.id}">{$var.name}</option>
+				                      </foreach>                  
+				                    </select>
+				                </div>
+				            </div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">备注信息</label>
+								<div class="col-sm-6">
+									<input type="text" name="note" id="note" placeholder="输入备注信息" class="form-control">
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">账号状态
+								</label>
+								<div class="col-sm-6">
+								<div class="radio i-checks">
+										<label>
+											<input type="radio" checked="checked" value="1" name="data[state]"> <i></i> 正常</label>
+											<label>
+											<input type="radio" value="0" name="data[state]"> <i></i> 停用</label>
+									</div>																	
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="form-group">
+								<div class="col-sm-4 col-sm-offset-2">
+									<button class="btn btn-primary" type="submit">保存内容</button>
+									<a class="btn btn-white" href="{:U('System/userlist')}">取消</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public:footer" />
+	<js file='__PUBLIC__/Common/js/uploadify/jquery.uploadify.min.js' />
+	<link rel="stylesheet" href="__PUBLIC__/Common/js/uploadify/uploadify.css">      
+	<script src="__PUBLIC__/Admin/js/plugins/validate/jquery.validate.min.js"></script>
+	<script src="__PUBLIC__/Admin/js/plugins/validate/messages_zh.min.js"></script>
+	<script src="__PUBLIC__/Admin/js/form-validate-adduser.js"></script>
+	
+	<script type="text/javascript">
+		$("#photo_file").uploadify({
+			'swf': '__PUBLIC__/Common/js/uploadify/uploadify.swf?t={$nowtime}',
+			'uploader': '{:U("Upload/uploaduserimg")}',
+			'cancelImg': '__PUBLIC__/Common/js/uploadify/uploadify-cancel.png',
+			'buttonText': '上传头像',
+			'height': 35,
+			'fileTypeExts': '*.gif;*.jpg;*.png',
+			'queueSizeLimit': 1,
+			'onUploadSuccess': function(file, data, response) {
+				$("#data_photo").val(data);
+				$("#upload_img").attr('src', '__ROOT__/Uploads' + data).show();
+			}
+		});
+
+	</script>
+	<script>
+       
+        var config = {
+            '.chosen-select': {},                    
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+    </script>
+	</body>
+
+</html>
+
